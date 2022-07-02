@@ -27,7 +27,7 @@ So for this tutorial we will show you how you can check if an email has the vali
 
 ## <b>Regex Components</b>
 
-- [Anchors `^` `$`](#anchors `^` `$`)
+- [Anchors](#anchors)
 - [Quantifiers `*` `+` `?` `{}`](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions `[ ]`](#bracket-expressions)
@@ -38,7 +38,9 @@ So for this tutorial we will show you how you can check if an email has the vali
 
 ---
 
-### Anchors `^` `$`
+### Anchors
+
+`^` `$`
 
 Anchors don't match characters Anchors match a position before or after characters: `^` : The caret anchor "^" matches the beginning of a string. `$` : the dollar anchor "$" matches the end of a string.
 <br/>

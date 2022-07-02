@@ -27,7 +27,7 @@ So for this tutorial we will show you how you can check if an email has the vali
 
 ## <b>Regex Components</b>
 
-- [Anchors `^` `$`](#anchors)
+- [Anchors `^` `$`](#anchors `^` `$`)
 - [Quantifiers `*` `+` `?` `{}`](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions `[ ]`](#bracket-expressions)

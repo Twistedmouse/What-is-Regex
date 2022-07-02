@@ -28,9 +28,9 @@ So for this tutorial we will show you how you can check if an email has the vali
 ## <b>Regex Components</b>
 
 - [Anchors](#anchors)
-- [Quantifiers `*` `+` `?` `{}`](#quantifiers)
+- [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
-- [Bracket Expressions `[ ]`](#bracket-expressions)
+- [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
@@ -59,7 +59,9 @@ Although this would not be the best use case. This example is more to understand
 
 <br>
 
-### Quantifiers `*` `+` `?` `{}`
+### Quantifiers
+
+`*` `+` `?` `{}`
 
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. In the table below you can see Quantifiers support by .NET:
 Greedy quantifier|Lazy quantifier|Description
@@ -111,7 +113,9 @@ Comprehensive example broken down:
 
 <br>
 
-### Bracket Expressions `[ ]`
+### Bracket Expressions
+
+`[ ]`
 
 <br>
 

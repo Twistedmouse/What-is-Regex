@@ -27,10 +27,10 @@ So for this tutorial we will show you how you can check if an email has the vali
 
 ## <b>Regex Components</b>
 
-- [Anchors](#anchors)
-- [Quantifiers](#quantifiers)
+- [Anchors `^` `$`](#anchors)
+- [Quantifiers `*` `+` `?` `{}`](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
-- [Bracket Expressions](#bracket-expressions)
+- [Bracket Expressions `[ ]`](#bracket-expressions)
 - [Character Classes](#character-classes)
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
@@ -106,6 +106,10 @@ Comprehensive example broken down:
   <br>
 
 ### Grouping Constructs
+
+<br>
+
+### Bracket Expressions `[ ]`
 
 <br>
 

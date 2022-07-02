@@ -38,12 +38,12 @@ So for this tutorial we will show you how you can check if an email has the vali
 
 ---
 
-### Anchors: `^` `$`
+### Anchors `^` `$`
 
 Anchors don't match characters Anchors match a position before or after characters: `^` : The caret anchor "^" matches the beginning of a string. `$` : the dollar anchor "$" matches the end of a string.
 <br/>
 
-### Examples:
+### Examples
 
 ```
 ^The    -    Matches any string that starts with "The"
@@ -57,7 +57,7 @@ Although this would not be the best use case. This example is more to understand
 
 <br>
 
-### Quantifiers: `*` `+` `?` `{}`
+### Quantifiers `*` `+` `?` `{}`
 
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. In the table below you can see Quantifiers support by .NET:
 Greedy quantifier|Lazy quantifier|Description
@@ -105,23 +105,23 @@ Comprehensive example broken down:
 - "`/g`" = Global.
   <br>
 
-### Grouping Constructs:
+### Grouping Constructs
 
 <br>
 
-### Character Classes:
+### Character Classes
 
 <br>
 
-### The OR Operator:
+### The OR Operator
 
 <br>
 
-### Flags:
+### Flags
 
 <br>
 
-### Character Escapes:
+### Character Escapes
 
 ## <br>
 

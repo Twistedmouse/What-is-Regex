@@ -91,6 +91,7 @@ Simple example broken down:
 
 `/\S+@\S+\.\S+/`
 
+- "`/`" = The forward slashes contain the code and define the search pattern.
 - "`\S+`" = Match any non whitespace character.
 - "`@`" = Must match an @ symbol.
 - "`\S+`" Match any non whitespace character.
@@ -109,7 +110,20 @@ Comprehensive example broken down:
 - "`/g`" = Global.
   <br>
 
-### Grouping Constructs
+### <b>Grouping Constructs</b>
+
+A Capturing group is when the objects of the group are place inside parenthesis "()". This will create mini patterns with the larger pattern. For example, if you are trying to find all instances of "email" or "Email" in a string you could use a grouping constructor, The expression will be as follows `/(e|E)mail/g`.
+
+Let's take a look at our comprehensive example again:  
+`(?:[a-z0-9-]*[a-z0-9])`  
+At the beginning of this portion of our RegEx we see: (?:
+This indicates a non-capturing group. It groups multiple tokens together without creating a capture group.
+
+| Code example | Explanation                                        |
+| ------------ | -------------------------------------------------- |
+| a(bc)        | parentheses create a capturing group with value bc |
+| a(?:bc)      | using ?: we disable the capturing group            |
+| a(?<foo>bc)  | using ?<foo> we put a name to the group            |
 
 <br>
 
@@ -139,7 +153,8 @@ Comprehensive example broken down:
 
 ## <b>Author:</b>
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+If you would like to reach out to me:\
+<a href="https://github.com/Twistedmouse">GitHub</a>, <a href="https://www.linkedin.com/in/tristan-fontanini-b91879203/">Linkedin</a> or send over an <a href="mailto:mousy93@hotmail.com">email</a>.
 
 ---
 

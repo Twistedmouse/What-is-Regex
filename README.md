@@ -132,18 +132,83 @@ If we choose to put a name to the groups (using (?<foo>...)) we will be able to 
 ### <b>Bracket Expressions</b>
 
 `[ ]`
+Brackets indicate a set of characters to match. Any individual character between the square brackets will match.
+You can also use `^` symbol to negate wat is between the brackets. For Example using `[abcd]` will match all characters abcd or `[a-d]` will also match all characters abcd.
+If you would like to match all characters from the alphabet you could use `[A-Za-z]`
+
+Now lets look at our example:
+
+`` /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g ``
+
+We will just look at the first part of our example: <br>
+`` [a-z0-9!#$%&'*+/=?^_`{|}~-] ``
+
+Lets break it down:
+
+`[`<br>
+&emsp;`a-z`: Matches characters in range of a to z (char codes of 97 through to 122) and remember this is case sensitive. <br>
+&emsp;`0-9`: Matches characters in range of 0-9 (char codes of 48 through to 57) <br>
+&emsp;`` !#$%&'*+/=?^_`{|}~- ``: Matches any of the specified symbols. <br>
+`]`
 
 <br>
 
 ### <b>Character Classes</b>
 
+Character classes are a shorthand way to represent a group of characters.
+In our simple email RegEx we are using this with the `\S`. This represents a single character that _is not_ white space. Character classes always start with a single backslash `\` which escapes the literal meaning of that character.
+
+Some common examples are:
+
+- `\s` : single whitespace character
+- `\S` : single character that is NOT white space
+- `\u` : single uppercase character `[A-Z]`
+- `\U` : single character that is not uppercase `[^A-Z]`
+- `\w` : word character `[a-zA-Z0-9_]`
+- `\W` : single character that is NOT a word character `[^a-zA-Z0-9_]`
+- `\x00-\xFF` : hexadecimal character
+- `\cX` : ASCII control character
+- `\d` : single digit `[0-9]`
+- `\D` : single character that is NOT a digit `[^0-9]`
+- `\E` : stop processing escaped characters
+- `\l` : match a single lowercase letter `[a-z]`
+- `\L` : single character that is not lowercase `[^a-z]`
+
 <br>
 
 ### <b>The OR Operator</b>
 
+In RegEx is stead of typing <b>OR</b> we would use a single vertical line `|` which enables as to match a collection of text against two different test patterns, if either returns true it becomes a match.
+
+We are enot using an <b>OR</b> operator in either of our email examples. But we will still proved an example below:<br>
+`John eats (hotdogs|Fries)`<br>
+So our expression will match either: <br>
+
+```
+John eats hotdogs.
+John eats fries.
+```
+
+But will not match:
+
+```
+John eats icecream.
+```
+
 <br>
 
 ### <b>Flags</b>
+
+A flag changes the default searching behavior of a regular expression. It makes a regex search in a different way.<br>
+
+| Flag | Name          | Modification                                                                                                                                       |
+| ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `i`  | Ignore Casing | Makes the expression search case-insensitively.                                                                                                    |
+| `g`  | Global        | Makes the expression search for all occurrences.                                                                                                   |
+| `s`  | Dot All       | Makes the wild character . match newlines as well.                                                                                                 |
+| `m`  | Multiline     | Makes the boundary characters ^ and $ match the beginning and ending of every single line instead of the beginning and ending of the whole string. |
+| `y`  | Sticky        | Makes the expression start its searching from the index indicated in its lastIndex property.                                                       |
+| `u`  | Unicode       | Makes the expression assume individual characters as code points, not code units, and thus match 32-bit characters as well.                        |
 
 <br>
 

@@ -201,18 +201,36 @@ John eats icecream.
 
 A flag changes the default searching behavior of a regular expression. It makes a regex search in a different way.<br>
 
-| Flag | Name          | Modification                                                                                                                                       |
-| ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `i`  | Ignore Casing | Makes the expression search case-insensitively.                                                                                                    |
-| `g`  | Global        | Makes the expression search for all occurrences.                                                                                                   |
-| `s`  | Dot All       | Makes the wild character . match newlines as well.                                                                                                 |
-| `m`  | Multiline     | Makes the boundary characters ^ and $ match the beginning and ending of every single line instead of the beginning and ending of the whole string. |
-| `y`  | Sticky        | Makes the expression start its searching from the index indicated in its lastIndex property.                                                       |
-| `u`  | Unicode       | Makes the expression assume individual characters as code points, not code units, and thus match 32-bit characters as well.                        |
+| Flag | Name          | Modification                                                                                                                                           |
+| ---- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `i`  | Ignore Casing | Makes the expression search case-insensitively.                                                                                                        |
+| `g`  | Global        | Makes the expression search for all occurrences.                                                                                                       |
+| `s`  | Dot All       | Makes the wild character `.` match newlines as well.                                                                                                   |
+| `m`  | Multiline     | Makes the boundary characters `^` and `$` match the beginning and ending of every single line instead of the beginning and ending of the whole string. |
+| `y`  | Sticky        | Makes the expression start its searching from the index indicated in its lastIndex property.                                                           |
+| `u`  | Unicode       | Makes the expression assume individual characters as code points, not code units, and thus match 32-bit characters as well.                            |
+
+`` /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g `` <- As you can see the only flag we use in our example is the global flag.
 
 <br>
 
 ### <b>Character Escapes</b>
+
+As we’ve seen, a backslash `\` is used to denote character classes, e.g. `\d` for a single digit. So it’s a special character in regexps (just like in regular strings).
+
+There are other special characters as well, that have special meaning in a regexp, such as `[ ] { } ( ) \ ^ $ . | ? * +.` They are used to do more powerful searches.
+Let’s say we want to find literally a dot. Not “any character”, but just a dot.
+
+To use a special character as a regular one, prepend it with a backslash: \..
+
+That’s also called “escaping a character”.
+
+Our example doesn't call for the use of character escapes, but here is a quick summary of how it works.
+
+- `\\` : Represents a single backslash character
+- `\+` : Represents a single "+" character
+- `\A` : Represents the start of a string
+- `\d` : represents a single digit `[0-9]`
 
 ## <br>
 

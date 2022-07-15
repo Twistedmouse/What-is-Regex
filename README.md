@@ -38,7 +38,7 @@ So for this tutorial we will show you how you can check if an email has the vali
 
 ---
 
-### Anchors
+### <b>Anchors</b>
 
 `^` `$`
 
@@ -59,7 +59,7 @@ Although this would not be the best use case. This example is more to understand
 
 <br>
 
-### Quantifiers
+### <b>Quantifiers</b>
 
 `*` `+` `?` `{}`
 
@@ -125,27 +125,29 @@ This indicates a non-capturing group. It groups multiple tokens together without
 | a(?:bc)      | using ?: we disable the capturing group            |
 | a(?<foo>bc)  | using ?<foo> we put a name to the group            |
 
+If we choose to put a name to the groups (using (?<foo>...)) we will be able to retrieve the group values using the match result like a dictionary where the keys will be the name of each group.
+
 <br>
 
-### Bracket Expressions
+### <b>Bracket Expressions</b>
 
 `[ ]`
 
 <br>
 
-### Character Classes
+### <b>Character Classes</b>
 
 <br>
 
-### The OR Operator
+### <b>The OR Operator</b>
 
 <br>
 
-### Flags
+### <b>Flags</b>
 
 <br>
 
-### Character Escapes
+### <b>Character Escapes</b>
 
 ## <br>
 
